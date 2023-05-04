@@ -4,7 +4,7 @@
 - Joel Francisco da Silva Filho
 - Lucas de Castro Zanoni
 - Nicolas Loffi Kaminski
-- Thiago Sales
+- Tiago Salles Melo
 - Kauan Laureano Cândido
 
 ## Descrição do projeto
