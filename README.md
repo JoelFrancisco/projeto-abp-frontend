@@ -1,5 +1,3 @@
-# projeto-abp-frontend
-
 # Hetsaniv
 
 ## Lista de Integrantes da Equipe
