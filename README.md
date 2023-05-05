@@ -14,7 +14,7 @@ Interface para dados de mapeamento de bicicletas elétricas
 Coletar e apresentar dados do uso, estado e localização de bicicletas elétricas
 
 ## Público-alvo
-Instituições com monitoramento de bicicletas eletrícas
+Instituições com monitoramento de bicicletas elétricas
 
 ## Estrutura do Projeto
 - Tela institucional
