@@ -31,8 +31,8 @@ Instituições com monitoramento de bicicletas elétricas
 
 O projeto pode ser dividido em diferentes partes:
 
-1. Criação da interface do usuário: desenvolvimento do layout da página, incluindo botões para filtrar as bicicletas por localização e status de bateria, campos de entrada para pesquisar por uma bicicleta específica e uma tabela para exibir as informações sobre as bicicletas.
-2. ntegração com a API de mapas: implementação da API de mapas para exibir a localização das bicicletas compartilhadas em um mapa interativo.
+1. Criação da interface do usuário: desenvolvimento do layout da página, com informações institucionais do projeto e identidade visual.
+2. Integração com a API de mapas: implementação da API de mapas para exibir a localização das bicicletas compartilhadas em um mapa interativo.
 3. Integração com a API de compartilhamento de bicicletas: obtenção de informações atualizadas sobre a localização e o nível de bateria das bicicletas compartilhadas por meio da API de compartilhamento de bicicletas.
 4. Visualização do nível de bateria: uso de uma biblioteca de gráficos para exibir o nível de bateria das bicicletas em um gráfico de barras ou em um medidor.
 5. Testes: realização de testes para garantir que o projeto está funcionando corretamente e atendendo aos requisitos.
