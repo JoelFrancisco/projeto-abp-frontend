@@ -11,7 +11,7 @@
 Interface para dados de mapeamento de bicicletas elétricas
 
 ## Objetivo do Projeto
-Coletar dados de bicicletas e apresentar em um mapa
+Coletar e apresentar dados do uso, estado e localização de bicicletas elétricas
 
 ## Público-alvo
 Instituições com monitoramento de bicicletas eletrícas
