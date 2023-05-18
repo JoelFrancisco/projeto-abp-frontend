@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hetsaniv
 
-## Getting Started
+## Lista de Integrantes da Equipe
+- Joel Francisco da Silva Filho
+- Lucas de Castro Zanoni
+- Nicolas Loffi Kaminski
+- Tiago Salles Melo
+- Kauan Laureano Cândido
 
-First, run the development server:
+## Descrição do projeto
+Interface de mapeamento de bicicletas inteligentes em um sistema de uso compartilhado.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Objetivo do Projeto
+Coletar e apresentar dados do uso de bateria e localização de bicicletas elétricas.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Público-alvo
+Instituições com monitoramento de bicicletas elétricas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estrutura do Projeto
+- Tela institucional descrevendo o objetivo do projeto 
+- Tela mapa das bicicletas
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tecnologias
+- NextJs
+- ReactJs
+- NodeJs
+- TailwindCSS
+- MUI
 
-## Learn More
+## Etapas de produção do projeto
 
-To learn more about Next.js, take a look at the following resources:
+O projeto pode ser dividido em diferentes partes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Criação da interface do usuário: desenvolvimento do layout da página, com informações institucionais do projeto e identidade visual.
+2. Integração com a API de mapas: implementação da API de mapas para exibir a localização das bicicletas compartilhadas em um mapa interativo.
+3. Integração com a API de compartilhamento de bicicletas: obtenção de informações atualizadas sobre a localização e o nível de bateria das bicicletas compartilhadas por meio da API de compartilhamento de bicicletas.
+4. Visualização do nível de bateria: uso de uma biblioteca de gráficos para exibir o nível de bateria das bicicletas em um gráfico de barras ou em um medidor.
+5. Testes: realização de testes para garantir que o projeto está funcionando corretamente e atendendo aos requisitos.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Uma vez que o projeto esteja concluído, os usuários poderão ver a localização das bicicletas compartilhadas em um mapa e verificar o nível de bateria de cada uma delas.
