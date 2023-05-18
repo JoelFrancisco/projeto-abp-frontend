@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { db } from "../../../infrastructure/database";
+import { getNewBaterry } from "./getNewBattery";
+import { getNewRunningTimeSeconds } from "./getNewRunningTimeSeconds";
 
 type UpdateSet = {
   baterry?: number
@@ -20,16 +22,12 @@ export async function GET() {
     return NextResponse.json({ message: "Any bikes running" });
   }
 
-  const newBaterry = bike.baterry == 0 
-    ? 100 
-    : bike.baterry - 2;
+  const newBaterry = getNewBaterry(bike.baterry);
 
-  const newRunningTimeSeconds = bike.running_time_seconds == 10000 
-    ? 0
-    : bike.running_time_seconds + 60;
+  const newRunningTimeSeconds = getNewRunningTimeSeconds(bike.running_time_seconds);
 
   let updateSet: UpdateSet = {
-    baterry: newBaterry, 
+    baterry: newBaterry,
     running_time_seconds: newRunningTimeSeconds
   };
 
