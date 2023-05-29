@@ -5,7 +5,7 @@
 - Lucas de Castro Zanoni
 - Nicolas Loffi Kaminski
 - Tiago Salles Melo
-- Kauan Laureano Cândido
+- Kauan Laureano Cândido.
 
 ## Descrição do projeto
 Interface de mapeamento de bicicletas inteligentes em um sistema de uso compartilhado.
