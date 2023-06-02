@@ -2,9 +2,15 @@ import React, {useState} from "react";
 
 export const ProgressBar = () => {
   const [progress, setProgress] = useState(0);
-  const handleButtonClick = () => {
+  const handleButtonClickIncrease = () => {
     if (progress < 100) {
-      setProgress(progress + 20);
+      setProgress(progress + 1);
+    }
+  };
+
+  const handleButtonClickDecrease = () => {
+    if (progress > 0) {
+      setProgress(progress - 1);
     }
   };
 
@@ -12,13 +18,17 @@ export const ProgressBar = () => {
     setProgress(0)
   }
 
+  const handleButtonFill = () => {
+    setProgress(100)
+  }
+
   const getColor = () => {
-    if (progress < 40) {
-      return "red";
-    } else if (progress < 70) {
-      return "yellow";
+    if (progress < 16) {
+      return "#ff0000";
+    } else if (progress < 30) {
+      return "#ffff00";
     } else {
-      return "green";
+      return "#32cd32";
     }
   };
   
@@ -30,8 +40,10 @@ export const ProgressBar = () => {
       </div>
     </div>
     <div className="progress-label">{progress}%</div>
-    <button onClick={handleButtonClick}>Progress</button>
-    <button onClick={handleButtonReset}>Reset</button>
+    <button onClick={handleButtonClickIncrease}>Aumentar</button>
+    <button onClick={handleButtonClickDecrease}>Diminuir</button>
+    <button onClick={handleButtonReset}>Reiniciar</button>
+    <button onClick={handleButtonFill}>Encher</button>
   </div>
   )
 };
