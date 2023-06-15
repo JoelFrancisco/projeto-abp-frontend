@@ -1,3 +1,4 @@
+
 import Battery from "../../public/battery.svg";
 import Speedometer from "../../public/speedometer.svg";
 import Sensor from "../../public/sensor.svg";
@@ -5,9 +6,13 @@ import Login from "../../public/login.svg";
 import Map from "../../public/map.svg";
 import Image from "next/image";
 
+
+
+
 export default function Home() {
   return (
     <>
+
       <main className="flex p-3 items-center justify-center flex-col">
         <article className="flex gap-6 space-x-16">
           <div className="m-9 flex flex-col items-center justify-center">
@@ -32,6 +37,7 @@ export default function Home() {
             <Image src={Map} alt="Logo + Nome Satc" width={800} />
           </div>
         </section>
+
       </main>
     </>
   );
