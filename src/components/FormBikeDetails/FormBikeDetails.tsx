@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import bikesRepository from "../../infraestructure/bikesRepository";
+import { useRouter } from "next/navigation";
 
 export default function FormBikeDetails({ id, oldColor = "", oldBrand = "", oldMaxVelocity = 0 }: {
   id?: string;
@@ -10,6 +11,8 @@ export default function FormBikeDetails({ id, oldColor = "", oldBrand = "", oldM
   const [color, setColor] = useState(oldColor);
   const [brand, setBrand] = useState(oldBrand);
   const [maxVelocity, setMaxVelocity] = useState(oldMaxVelocity);
+
+  const router = useRouter();
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -28,7 +31,9 @@ export default function FormBikeDetails({ id, oldColor = "", oldBrand = "", oldM
       }
 
       bikesRepository.save(data);
-    } catch(err: any) {
+
+      router.push("/Dashboard");
+    } catch (err: any) {
       console.log(err.message);
     }
   }
