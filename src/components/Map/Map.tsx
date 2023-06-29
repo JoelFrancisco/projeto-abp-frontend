@@ -1,9 +1,9 @@
-'use client'
+"use client";
 
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useEffect, useState } from "react";
 
-import bikeIcon from "../../../public/bike.png"
+import bikeIcon from "../../../public/bike.png";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
@@ -34,9 +34,9 @@ export default function Map() {
   useInterval(async () => {
     try {
       const newData = await getData();
-      setData(newData); 
+      setData(newData);
       console.log(data);
-    } catch(err: any) {
+    } catch (err: any) {
       console.log(err.message);
     }
   }, 1000);
@@ -52,7 +52,7 @@ export default function Map() {
   useEffect(() => {
     const DefaultIcon = L.icon({
       iconUrl: bikeIcon.src,
-      iconSize: [64,64]
+      iconSize: [64, 64],
     });
 
     L.Marker.prototype.options.icon = DefaultIcon;
@@ -66,12 +66,12 @@ export default function Map() {
       />
       <Marker position={[-28.703918, -49.406100]}>
         <Popup>
-          <p>Latitude: {data.length > 0 ? data[0].latitude: 0}</p>
-          <p>Longitude: {data.length > 0 ? data[0].longitude: 0}</p>
-          <p>Bateria: {data.length > 0 ? `${data[0].baterry}%`: 0}</p>
+          <p>Latitude: {data.length > 0 ? data[0].latitude : 0}</p>
+          <p>Longitude: {data.length > 0 ? data[0].longitude : 0}</p>
+          <p>Bateria: {data.length > 0 ? `${data[0].baterry}%` : 0}</p>
           <p>Tempo rodado: {data.length > 0 ? formatDate(data[0].uptime_seconds) : 0}</p>
         </Popup>
       </Marker>
     </MapContainer>
-  )
+  );
 }
