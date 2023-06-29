@@ -1,3 +1,7 @@
+"use client"
+
+import { createContext, useContext, useState } from "react";
+
 import Battery from "../../public/battery.svg";
 import Speedometer from "../../public/speedometer.svg";
 import Sensor from "../../public/sensor.svg";
@@ -7,9 +11,13 @@ import dynamic from "next/dynamic";
 
 const Map = dynamic(() => import("../components/Map/Map"), { ssr: false })
 
+const GlobalContext = createContext({});
+
 export default function Page() {
+  const [user, setUser] = useState({});
+
   return (
-    <>
+    <GlobalContext.Provider value={{ user, setUser }}>
       <main className="flex p-3 items-center justify-center flex-col">
         <article className="flex gap-6 space-x-16">
           <div className="m-9 flex flex-col items-center justify-center">
@@ -83,7 +91,7 @@ export default function Page() {
           </div>
         </section>
       </main>
-    </>
+    </GlobalContext.Provider>
   );
 }
 
