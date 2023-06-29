@@ -52,6 +52,7 @@ export default function Map() {
   useEffect(() => {
     const DefaultIcon = L.icon({
       iconUrl: bikeIcon.src,
+      iconSize: [64,64]
     });
 
     L.Marker.prototype.options.icon = DefaultIcon;

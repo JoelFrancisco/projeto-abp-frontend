@@ -1,7 +1,5 @@
 "use client"
 
-import { createContext, useContext, useState } from "react";
-
 import Battery from "../../public/battery.svg";
 import Speedometer from "../../public/speedometer.svg";
 import Sensor from "../../public/sensor.svg";
@@ -11,13 +9,8 @@ import dynamic from "next/dynamic";
 
 const Map = dynamic(() => import("../components/Map/Map"), { ssr: false })
 
-const GlobalContext = createContext({});
-
 export default function Page() {
-  const [user, setUser] = useState({});
-
   return (
-    <GlobalContext.Provider value={{ user, setUser }}>
       <main className="flex p-3 items-center justify-center flex-col">
         <article className="flex gap-6 space-x-16">
           <div className="m-9 flex flex-col items-center justify-center">
@@ -36,7 +29,7 @@ export default function Page() {
             <p className="text-center mb-px">Login</p>
             <Image src={Login} alt="Logo + Nome Satc" width={50} />
           </div>
-        </article>
+          </article>
         <section className="flex flex-col items-center justify-center mt-6">
           <div className="w-4/5 border-2 border-gray-800 shadow">
             <Map />
@@ -74,13 +67,6 @@ export default function Page() {
             <li><i>API intuitiva;</i></li>
             <li><i>Gratuito.</i></li>
 
-            <p><strong>Clerk</strong></p>
-            <li><i>Autenticação e gerenciamento de identidade que oferece integração com o Google;</i></li>
-            <li><i>Lida com todas as etapas do gerenciamento de identidade, incluindo registro, login, recuperação de senha e atualização de perfil;</i></li>
-            <li><i>API intuitiva;</i></li>
-            <li><i>Gratuito até 5 mil users.</i></li>
-
-
             <p><strong>Aplicação:</strong></p>
             Acima é possível ver uma integração com mapa identificando a posição atual da bicicleta. Clicando nele, é possível ver as informações de localização e nível de bateria.
 
@@ -91,7 +77,6 @@ export default function Page() {
           </div>
         </section>
       </main>
-    </GlobalContext.Provider>
   );
 }
 
