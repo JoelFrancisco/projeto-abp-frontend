@@ -11,7 +11,6 @@ export function Header() {
         <Link href="/">Home</Link>
         <Link href="LoginPage">Login</Link>
       </nav>
-      <Image src={HeaderImg_2} alt="Logo + Nome UniSatc" width={224} />
     </header>
   );
 }
