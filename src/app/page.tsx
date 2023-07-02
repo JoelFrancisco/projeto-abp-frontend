@@ -2,7 +2,6 @@
 
 import Battery from "../../public/battery.svg";
 import Speedometer from "../../public/speedometer.svg";
-import Sensor from "../../public/sensor.svg";
 import Login from "../../public/login.svg";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -30,7 +29,7 @@ export default function Page() {
         </div>
       </article>
       <section className="flex flex-col items-center justify-center mt-6">
-        <div className="w-4/5 border-2 border-gray-800 shadow">
+        <div className="w-fit border-2 border-gray-800 shadow">
           <Map />
         </div>
       </section>
