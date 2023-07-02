@@ -11,6 +11,7 @@ export function FormLogin() {
   const { setUser } = useGlobalState();
 
   const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -37,17 +38,18 @@ export function FormLogin() {
     >
       <Image src={LogoUnisatc} alt="Logo UniSatc" />
       <input
-        className="rounded-xl py-4 px-9 text-2xl text-left border-black border-solid border-2 outline-none"
+        className="rounded-xl py-4 px-9 text-2xl text-left border-solid border-2 outline-none border-gray-200"
         type="text"
-        placeholder="Username"
+        placeholder="Usuario"
         onChange={(e) => setUsername(e.target.value)}
       />
       <input
-        className="rounded-xl py-4 px-9 text-2xl text-left border-black border-solid border-2 outline-none"
+        className="rounded-xl py-4 px-9 text-2xl text-left border-solid border-2 outline-none border-gray-200"
         type="password"
-        placeholder="Password"
+        placeholder="Senha"
+        onChange={(e) => setPassword(e.target.value)}
       />
-      <button type="submit" className="bg-green py-5 px-14 text-2xl rounded-full hover:brightness-90">
+      <button type="submit" className="bg-green py-5 px-14 text-2xl rounded-full hover:brightness-90 text-gray-500">
         Login
       </button>
     </form>
